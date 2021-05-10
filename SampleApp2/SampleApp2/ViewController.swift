@@ -17,7 +17,15 @@ class ViewController: UIViewController {
   @objc func buttonTapped() {
     print("buttonTapped")
   }
-
+  
+  @IBAction func sliderValueChanged(_ sender: UISlider) {
+    print("sliderValueChanged: \(sender.value)")
+  }
+  
+  @IBAction func switchValueChanged(_ sender: UISwitch) {
+    print("switchValueChanged: \(sender.isOn)")
+  }
+  
   @IBAction func buttonTapped2(_ sender: UIButton) {
     print("buttonTapped2")
     count += 1

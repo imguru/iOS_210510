@@ -6,10 +6,11 @@ import UIKit
 // => Interface 기반 이벤트 처리 방식
 //   1) dataSource: UIPickerViewDataSource
 //   2) delegate: UIPickerViewDelegate
-class ViewController2: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate
-{
+class ViewController2: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate, UITextFieldDelegate {
   @IBOutlet var pickerView: UIPickerView!
   @IBOutlet var nameLabel: UILabel!
+
+  @IBOutlet var textField: UITextField!
 
   let data = [
     "Hello",
@@ -20,17 +21,40 @@ class ViewController2: UIViewController, UIPickerViewDataSource, UIPickerViewDel
     "Money"
   ]
 
-  override func viewDidLoad()
-  {
+  override func viewDidLoad() {
     super.viewDidLoad()
 
     pickerView.dataSource = self
     pickerView.delegate = self
+
+    textField.delegate = self
+  }
+
+  func textFieldShouldEndEditing(_ textField: UITextField) -> Bool {
+    print("textFieldShouldEndEditing")
+    return true
+  }
+
+  func textField(_ textField: UITextField,
+                 shouldChangeCharactersIn range: NSRange,
+                 replacementString string: String) -> Bool
+  {
+    print("shouldChangeCharactersIn")
+
+    textField.layer.borderWidth = 1.0
+    if let count = textField.text?.count {
+      if count < 10 {
+        textField.layer.borderColor = UIColor.red.cgColor
+      } else {
+        textField.layer.borderColor = UIColor.blue.cgColor
+      }
+    }
+
+    return true
   }
 
   // returns the number of 'columns' to display.
-  func numberOfComponents(in pickerView: UIPickerView) -> Int
-  {
+  func numberOfComponents(in pickerView: UIPickerView) -> Int {
     return 1
   }
 

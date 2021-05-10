@@ -122,6 +122,12 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kRt-OM-ylg">
+                                <rect key="frame" x="59" y="495" width="257" height="82"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="ADi-bH-wYG"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -129,6 +135,7 @@
                     <connections>
                         <outlet property="nameLabel" destination="GHA-CO-6vV" id="kBJ-c1-QRF"/>
                         <outlet property="pickerView" destination="142-0o-hWN" id="n2k-mc-Ku6"/>
+                        <outlet property="textField" destination="kRt-OM-ylg" id="Ac7-NO-p62"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kbR-0f-W5S" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

@@ -39,18 +39,21 @@ class ViewController2: UIViewController, UIPickerViewDataSource, UIPickerViewDel
                  shouldChangeCharactersIn range: NSRange,
                  replacementString string: String) -> Bool
   {
-    print("shouldChangeCharactersIn")
-
+    // print("shouldChangeCharactersIn")
     textField.layer.borderWidth = 1.0
     if let count = textField.text?.count {
-      if count < 10 {
+      if count < 3 {
         textField.layer.borderColor = UIColor.red.cgColor
-      } else {
+      } else if count < 7 {
         textField.layer.borderColor = UIColor.blue.cgColor
       }
     }
 
-    return true
+    let newLength = textField.text!.count + string.count - range.length
+
+    print("range: \(range) / string: \(string)")
+
+    return newLength < 7
   }
 
   // returns the number of 'columns' to display.

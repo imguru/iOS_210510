@@ -29,7 +29,27 @@ func sub(_ a: Int, _ b: Int) -> Int {
 //    => Delegate 객체: UIApplication에서 발생하는 이벤트를 수신하는 객체
 //  3) Delegate 객체를 생성해서, UIApplication의 delegate로 등록해줍니다.
 
-
 // static void main(String[] args) {}
+// print(AppDelegate.self)
+// let className = String(describing: type(of: AppDelegate.self))
+// print(className)
 
-UIApplicationMain(CommandLine.argc, CommandLine.unsafeArgv, nil, "SampleApp1.AppDelegate")
+// UIApplicationMain(CommandLine.argc, CommandLine.unsafeArgv, nil, "SampleApp1.AppDelegate")
+UIApplicationMain(CommandLine.argc, CommandLine.unsafeArgv, nil, AppDelegate2.self.description())
+
+// Cocoa Touch Framework
+//  - main.swift - UIApplicationMain
+//                     |
+//                 UIApplication ----> AppDelegate
+//                                         |
+//                          func application(didFinishLaunchingWithOptions) -> Bool
+//                                         |
+//                                  window: UIWindow
+//                                         |
+//                                 rootViewContoller ----> UIViewcontroller
+//                                                              |
+//                                                          view: UIView
+
+
+
+

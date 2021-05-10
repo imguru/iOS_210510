@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="7Tx-Pk-tQx">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina5_9" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -94,9 +94,9 @@
                     <connections>
                         <outlet property="countLabel" destination="fIR-33-Cvg" id="OGm-aJ-HcB"/>
                         <outlet property="touchButton" destination="usJ-gw-6UT" id="cQE-kO-hcb"/>
-                        <outletCollection property="views" destination="n4l-Of-T6u" collectionClass="NSMutableArray" id="VOb-Jr-vLM"/>
-                        <outletCollection property="views" destination="BcS-EU-H1q" collectionClass="NSMutableArray" id="B7V-w7-Lnq"/>
-                        <outletCollection property="views" destination="Jp1-T0-nO9" collectionClass="NSMutableArray" id="CIy-Of-B1u"/>
+                        <outletCollection property="views" destination="n4l-Of-T6u" collectionClass="NSMutableArray" id="OaQ-jV-KQj"/>
+                        <outletCollection property="views" destination="BcS-EU-H1q" collectionClass="NSMutableArray" id="Qv7-nX-oEP"/>
+                        <outletCollection property="views" destination="Jp1-T0-nO9" collectionClass="NSMutableArray" id="OWU-mh-xbh"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

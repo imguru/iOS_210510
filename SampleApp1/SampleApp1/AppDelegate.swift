@@ -37,7 +37,7 @@ import UIKit
 //  2) Storyboard 기반
 
 // @main
-class AppDelegate: UIResponder, UIApplicationDelegate {
+class AppDelegate2: UIResponder, UIApplicationDelegate {
   // iOS 13 이전
   var window: UIWindow?
 

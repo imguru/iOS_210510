@@ -18,8 +18,9 @@ class ViewController: UIViewController {
 
   // Outlet Collection
   //                   Array<UIView>
-  @IBOutlet var views: [UIView]!
 
+  @IBOutlet var views: [UIView]!
+  
   override func viewDidLoad() {
     super.viewDidLoad()
     // Do any additional setup after loading the view.
@@ -29,8 +30,8 @@ class ViewController: UIViewController {
       v.layer.cornerRadius = 16
     }
 
-    // firstView.backgroundColor = UIColor.blue
-    // firstView.layer.cornerRadius = 16
+     // firstView.backgroundColor = UIColor.blue
+     // firstView.layer.cornerRadius = 16
 
     #if false
     touchButton.addTarget(self,

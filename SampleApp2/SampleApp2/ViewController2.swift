@@ -31,6 +31,7 @@ class ViewController2: UIViewController, UIPickerViewDataSource, UIPickerViewDel
 
   let images = [
     "kotlin",
+    "kotlin2",
     "swift",
     "typescript",
   ]
@@ -39,7 +40,7 @@ class ViewController2: UIViewController, UIPickerViewDataSource, UIPickerViewDel
     super.viewDidLoad()
 
     // imageView.image = UIImage(named: "swift")
-    imageView.image = #imageLiteral(resourceName: "kotlin")
+    // imageView.image = #imageLiteral(resourceName: "kotlin")
 
     pickerView.dataSource = self
     pickerView.delegate = self
@@ -111,7 +112,6 @@ class ViewController2: UIViewController, UIPickerViewDataSource, UIPickerViewDel
   {
     return 120.0
   }
-  
 
   func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
     // let text = data[row]

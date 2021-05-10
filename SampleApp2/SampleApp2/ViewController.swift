@@ -12,12 +12,16 @@ class ViewController: UIViewController {
   @IBOutlet var countLabel: UILabel!
   @IBOutlet var touchButton: UIButton!
 
+  var count = 0
+
   @objc func buttonTapped() {
     print("buttonTapped")
   }
 
   @IBAction func buttonTapped2(_ sender: UIButton) {
     print("buttonTapped2")
+    count += 1
+    countLabel.text = "\(count)"
   }
 
   override func viewDidLoad() {

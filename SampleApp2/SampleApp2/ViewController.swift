@@ -14,6 +14,31 @@ class ViewController: UIViewController {
 
   var count = 0
 
+  @IBOutlet var firstView: UIView!
+
+  // Outlet Collection
+  //                   Array<UIView>
+  @IBOutlet var views: [UIView]!
+
+  override func viewDidLoad() {
+    super.viewDidLoad()
+    // Do any additional setup after loading the view.
+
+    for v in views {
+      v.backgroundColor = UIColor.blue
+      v.layer.cornerRadius = 16
+    }
+
+    // firstView.backgroundColor = UIColor.blue
+    // firstView.layer.cornerRadius = 16
+
+    #if false
+    touchButton.addTarget(self,
+                          action: #selector(buttonTapped),
+                          for: .touchUpInside)
+    #endif
+  }
+
   @IBAction func textFieldEditingChagned(_ sender: UITextField) {
     if let text = sender.text {
       print("textFieldEditingChagned: \(text)")
@@ -56,16 +81,5 @@ class ViewController: UIViewController {
     print("buttonTapped2")
     count += 1
     countLabel.text = "\(count)"
-  }
-
-  override func viewDidLoad() {
-    super.viewDidLoad()
-    // Do any additional setup after loading the view.
-
-    #if false
-    touchButton.addTarget(self,
-                          action: #selector(buttonTapped),
-                          for: .touchUpInside)
-    #endif
   }
 }

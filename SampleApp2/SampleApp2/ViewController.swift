@@ -13,24 +13,28 @@ class ViewController: UIViewController {
   @IBOutlet var touchButton: UIButton!
 
   var count = 0
-  
+
+  @IBAction func textFieldEditingChagned(_ sender: UITextField) {
+    if let text = sender.text {
+      print("textFieldEditingChagned: \(text)")
+    }
+  }
+
   @IBAction func textFieldEditingDidEnd(_ sender: UITextField) {
     // Optional 처리 방법
     // print(sender.text)
     let text: String? = sender.text
-    
+
     // 1. 강제 접근 - !
     //  - nil일 경우 프로그램이 비정상 종료합니다.
     // print(text!)
-    
+
     // 2. Optional Binding
     if let text = text {
       print(text)
     }
-    
-    
   }
-  
+
   @IBAction func stepperValueChagned(_ sender: UIStepper) {
     print("stepper: \(sender.value)")
     countLabel.text = "\(sender.value)"

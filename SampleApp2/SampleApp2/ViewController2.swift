@@ -6,8 +6,7 @@ import UIKit
 // => Interface 기반 이벤트 처리 방식
 //   1) dataSource: UIPickerViewDataSource
 //   2) delegate: UIPickerViewDelegate
-class ViewController2:
-  UIViewController, UIPickerViewDataSource, UIPickerViewDelegate
+class ViewController2: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate
 {
   @IBOutlet var pickerView: UIPickerView!
   @IBOutlet var nameLabel: UILabel!
@@ -21,7 +20,8 @@ class ViewController2:
     "Money"
   ]
 
-  override func viewDidLoad() {
+  override func viewDidLoad()
+  {
     super.viewDidLoad()
 
     pickerView.dataSource = self
@@ -29,7 +29,8 @@ class ViewController2:
   }
 
   // returns the number of 'columns' to display.
-  func numberOfComponents(in pickerView: UIPickerView) -> Int {
+  func numberOfComponents(in pickerView: UIPickerView) -> Int
+  {
     return 1
   }
 
@@ -51,5 +52,10 @@ class ViewController2:
                   rowHeightForComponent component: Int) -> CGFloat
   {
     return 48.0
+  }
+
+  func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+    let text = data[row]
+    nameLabel.text = text
   }
 }

@@ -10,6 +10,10 @@ import UIKit
 // IB / Storyboard 통해 생성할 경우
 // - init(coder: NSCoder)
 
+protocol CaptionImageViewDelegate {
+  func onTap(_ captionImageView: CaptionImageView)
+}
+
 @IBDesignable
 class CaptionImageView: UIView {
   @IBOutlet var imageView: UIImageView!
@@ -17,7 +21,9 @@ class CaptionImageView: UIView {
   //  - nil 체크 없이 사용할 수 있습니다.
   //  - nil일 경우, 잘못된 참조로 인해 프로그램이 비정상 종료할 수 있습니다.
   @IBOutlet var contentView: UIView!
-
+  
+  var delegate: CaptionImageViewDelegate?
+  
   @IBInspectable var caption: String? {
     get {
       return nameLabel?.text
@@ -55,4 +61,11 @@ class CaptionImageView: UIView {
     contentView.frame = bounds
     addSubview(contentView)
   }
+  
+  
+  @IBAction func onTap(_ sender: UITapGestureRecognizer) {
+    print("onTap")
+    delegate?.onTap(self)
+  }
+
 }

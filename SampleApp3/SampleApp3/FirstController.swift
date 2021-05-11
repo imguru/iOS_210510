@@ -9,7 +9,8 @@ import UIKit
 
 class FirstController: UIViewController {
   @IBOutlet var childView: UIView!
-
+  @IBOutlet var textField: UITextField!
+  
   override func viewDidLoad() {
     super.viewDidLoad()
 
@@ -28,10 +29,10 @@ class FirstController: UIViewController {
       
       print("keyboardWillHideNotification")
     }
-    
-    
-    
-    
+  }
+  
+  override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+    textField.resignFirstResponder()
   }
 
   @IBAction func onTapOpenButton(_ sender: UIButton) {

@@ -12,6 +12,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FirstController" customModule="SampleApp3" customModuleProvider="target">
             <connections>
                 <outlet property="childView" destination="aQD-wB-QCd" id="KYp-pa-J8S"/>
+                <outlet property="textField" destination="kPb-gW-PfC" id="kDK-tO-l5Q"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>

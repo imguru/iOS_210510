@@ -14,6 +14,10 @@
 		7A76E78E264A565600E51FA0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7A76E78C264A565600E51FA0 /* LaunchScreen.storyboard */; };
 		7A76E797264A57A700E51FA0 /* FirstController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A76E795264A57A700E51FA0 /* FirstController.swift */; };
 		7A76E798264A57A700E51FA0 /* FirstController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7A76E796264A57A700E51FA0 /* FirstController.xib */; };
+		7A76E79B264A65ED00E51FA0 /* FirstController2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A76E799264A65ED00E51FA0 /* FirstController2.swift */; };
+		7A76E79C264A65ED00E51FA0 /* FirstController2.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7A76E79A264A65ED00E51FA0 /* FirstController2.xib */; };
+		7A76E79F264A662D00E51FA0 /* SecondController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A76E79D264A662D00E51FA0 /* SecondController.swift */; };
+		7A76E7A0264A662D00E51FA0 /* SecondController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7A76E79E264A662D00E51FA0 /* SecondController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +30,10 @@
 		7A76E78F264A565600E51FA0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7A76E795264A57A700E51FA0 /* FirstController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstController.swift; sourceTree = "<group>"; };
 		7A76E796264A57A700E51FA0 /* FirstController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FirstController.xib; sourceTree = "<group>"; };
+		7A76E799264A65ED00E51FA0 /* FirstController2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstController2.swift; sourceTree = "<group>"; };
+		7A76E79A264A65ED00E51FA0 /* FirstController2.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FirstController2.xib; sourceTree = "<group>"; };
+		7A76E79D264A662D00E51FA0 /* SecondController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondController.swift; sourceTree = "<group>"; };
+		7A76E79E264A662D00E51FA0 /* SecondController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SecondController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +74,10 @@
 				7A76E78F264A565600E51FA0 /* Info.plist */,
 				7A76E795264A57A700E51FA0 /* FirstController.swift */,
 				7A76E796264A57A700E51FA0 /* FirstController.xib */,
+				7A76E799264A65ED00E51FA0 /* FirstController2.swift */,
+				7A76E79A264A65ED00E51FA0 /* FirstController2.xib */,
+				7A76E79D264A662D00E51FA0 /* SecondController.swift */,
+				7A76E79E264A662D00E51FA0 /* SecondController.xib */,
 			);
 			path = SampleApp3;
 			sourceTree = "<group>";
@@ -129,6 +141,8 @@
 			files = (
 				7A76E798264A57A700E51FA0 /* FirstController.xib in Resources */,
 				7A76E78E264A565600E51FA0 /* LaunchScreen.storyboard in Resources */,
+				7A76E79C264A65ED00E51FA0 /* FirstController2.xib in Resources */,
+				7A76E7A0264A662D00E51FA0 /* SecondController.xib in Resources */,
 				7A76E78B264A565600E51FA0 /* Assets.xcassets in Resources */,
 				7A76E789264A565500E51FA0 /* Main.storyboard in Resources */,
 			);
@@ -144,6 +158,8 @@
 				7A76E797264A57A700E51FA0 /* FirstController.swift in Sources */,
 				7A76E786264A565500E51FA0 /* ViewController.swift in Sources */,
 				7A76E782264A565500E51FA0 /* AppDelegate.swift in Sources */,
+				7A76E79B264A65ED00E51FA0 /* FirstController2.swift in Sources */,
+				7A76E79F264A662D00E51FA0 /* SecondController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

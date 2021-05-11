@@ -6,7 +6,6 @@ import UIKit
 // 2. removeFromSuperview
 
 // Keyboard가 올라오는 이벤트 - NotificationCenter
-
 class FirstController: UIViewController {
   @IBOutlet var childView: UIView!
   @IBOutlet var textField: UITextField!
@@ -39,28 +38,30 @@ class FirstController: UIViewController {
   }
 
   @IBAction func onTapOpenButton(_ sender: UIButton) {
-    UIView.animate(withDuration: 2.0) {
-      // self.textField.frame.origin.y = 362
-      self.textFieldBottomMargin.constant += 50
-      self.view.layoutIfNeeded()
-    }
-   
-    
     /*
-     self.childView.backgroundColor = UIColor.cyan
-     self.childView.frame = CGRect(x: 0, y: 0, width: 0, height: 0)
-
-     UIView.animate(withDuration: 3.0) {
-       self.view.addSubview(self.childView)
-
-       self.childView.frame = self.view.frame
-       self.childView.backgroundColor = UIColor.blue
+     UIView.animate(withDuration: 2.0) {
+       // self.textField.frame.origin.y = 362
+       self.textFieldBottomMargin.constant += 50
+      
+       // AutoLayout을 조정할 경우, 아래의 함수가 반드시 호출되어야
+       // 애니메이션이 수행됩니다.
+       self.view.layoutIfNeeded()
      }
      */
+  
+    self.childView.backgroundColor = UIColor.cyan
+    self.childView.frame = CGRect(x: 0, y: 0, width: 0, height: 0)
+
+    UIView.animate(withDuration: 3.0) {
+      self.view.addSubview(self.childView)
+
+      self.childView.frame = self.view.frame
+      self.childView.backgroundColor = UIColor.blue
+    }
   }
 
   @IBAction func onTapCloseButton(_ sender: UIButton) {
-    self.textField.frame.origin.y = 462
+    // self.textField.frame.origin.y = 462
     
     /*
      UIView.animate(withDuration: 3.0) {
@@ -69,13 +70,11 @@ class FirstController: UIViewController {
      }
      */
     
-    /*
-     UIView.animate(withDuration: 3.0, animations: {
-       self.childView.frame = CGRect(x: 0, y: 0, width: 0, height: 0)
-       self.childView.backgroundColor = UIColor.cyan
-     }, completion: { _ in
-       self.childView.removeFromSuperview()
-     })
-     */
+    UIView.animate(withDuration: 3.0, animations: {
+      self.childView.frame = CGRect(x: 0, y: 0, width: 0, height: 0)
+      self.childView.backgroundColor = UIColor.cyan
+    }, completion: { _ in
+      self.childView.removeFromSuperview()
+    })
   }
 }

@@ -10,6 +10,7 @@ import UIKit
 // IB / Storyboard 통해 생성할 경우
 // - init(coder: NSCoder)
 
+// 설정: Command + ,
 protocol CaptionImageViewDelegate {
   func onTap(_ captionImageView: CaptionImageView)
 }

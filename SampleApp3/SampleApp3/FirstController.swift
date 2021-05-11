@@ -39,9 +39,10 @@ class FirstController: UIViewController {
   }
 
   @IBAction func onTapOpenButton(_ sender: UIButton) {
-    UIView.animate(withDuration: 3.0) {
+    UIView.animate(withDuration: 2.0) {
       // self.textField.frame.origin.y = 362
       self.textFieldBottomMargin.constant += 50
+      self.view.layoutIfNeeded()
     }
    
     

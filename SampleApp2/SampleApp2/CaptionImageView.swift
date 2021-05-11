@@ -18,7 +18,7 @@ class CaptionImageView: UIView {
   //  - nil일 경우, 잘못된 참조로 인해 프로그램이 비정상 종료할 수 있습니다.
   @IBOutlet var contentView: UIView!
 
-  var caption: String? {
+  @IBInspectable var caption: String? {
     get {
       return nameLabel?.text
     }
@@ -27,7 +27,7 @@ class CaptionImageView: UIView {
     }
   }
 
-  var image: UIImage? {
+  @IBInspectable var image: UIImage? {
     get {
       return imageView?.image
     }

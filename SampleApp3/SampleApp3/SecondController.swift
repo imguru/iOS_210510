@@ -9,5 +9,6 @@ class SecondController: UIViewController {
   }
   
   @IBAction func onTapCloseButton(_ sender: UIButton) {
+    dismiss(animated: true)
   }
 }

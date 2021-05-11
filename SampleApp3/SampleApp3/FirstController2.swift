@@ -17,8 +17,21 @@ class FirstController2: UIViewController {
   }
 
   @IBAction func onTapOpenButton(_ sender: UIButton) {
-    let controller = SecondController() // SecondController.xib
+    // let controller = SecondController() // SecondController.xib
     // let controller = SecondController(nibName: "SecondController", bundle: nil)
-    present(controller, animated: true)
+    // present(controller, animated: true)
+
+    let alertController = UIAlertController(title: "Alert!", message: "Hello!", preferredStyle: .alert)
+    let okAction = UIAlertAction(title: "Yes", style: .default) { action in
+      print("Yes!!!!")
+    }
+    let cancelAction = UIAlertAction(title: "No", style: .cancel, handler: nil)
+    let sampleAction = UIAlertAction(title: "Delete", style: .destructive, handler: nil)
+    
+    alertController.addAction(okAction)
+    alertController.addAction(cancelAction)
+    alertController.addAction(sampleAction)
+
+    present(alertController, animated: true)
   }
 }

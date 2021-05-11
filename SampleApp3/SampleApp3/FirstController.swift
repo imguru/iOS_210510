@@ -10,6 +10,7 @@ import UIKit
 class FirstController: UIViewController {
   @IBOutlet var childView: UIView!
   @IBOutlet var textField: UITextField!
+  @IBOutlet var textFieldBottomMargin: NSLayoutConstraint!
   
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -18,47 +19,62 @@ class FirstController: UIViewController {
     let notificationCenter = NotificationCenter.default
     notificationCenter.addObserver(forName: UIResponder.keyboardWillShowNotification,
                                    object: nil,
-                                   queue: .main) { notification in
+                                   queue: .main) { _ in
       
       print("keyboardWillShowNotification")
+      self.textField.frame.origin.y = 362
     }
     
     notificationCenter.addObserver(forName: UIResponder.keyboardWillHideNotification,
                                    object: nil,
-                                   queue: .main) { notification in
+                                   queue: .main) { _ in
       
       print("keyboardWillHideNotification")
+      self.textField.frame.origin.y = 462
     }
   }
   
   override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-    textField.resignFirstResponder()
+    self.textField.resignFirstResponder()
   }
 
   @IBAction func onTapOpenButton(_ sender: UIButton) {
-    self.childView.backgroundColor = UIColor.cyan
-    self.childView.frame = CGRect(x: 0, y: 0, width: 0, height: 0)
-
     UIView.animate(withDuration: 3.0) {
-      self.view.addSubview(self.childView)
-
-      self.childView.frame = self.view.frame
-      self.childView.backgroundColor = UIColor.blue
+      // self.textField.frame.origin.y = 362
+      self.textFieldBottomMargin.constant += 50
     }
+   
+    
+    /*
+     self.childView.backgroundColor = UIColor.cyan
+     self.childView.frame = CGRect(x: 0, y: 0, width: 0, height: 0)
+
+     UIView.animate(withDuration: 3.0) {
+       self.view.addSubview(self.childView)
+
+       self.childView.frame = self.view.frame
+       self.childView.backgroundColor = UIColor.blue
+     }
+     */
   }
 
   @IBAction func onTapCloseButton(_ sender: UIButton) {
+    self.textField.frame.origin.y = 462
+    
     /*
      UIView.animate(withDuration: 3.0) {
        self.childView.frame = CGRect(x: 0, y: 0, width: 0, height: 0)
        self.childView.backgroundColor = UIColor.cyan
      }
      */
-    UIView.animate(withDuration: 3.0, animations: {
-      self.childView.frame = CGRect(x: 0, y: 0, width: 0, height: 0)
-      self.childView.backgroundColor = UIColor.cyan
-    }, completion: { _ in
-      self.childView.removeFromSuperview()
-    })
+    
+    /*
+     UIView.animate(withDuration: 3.0, animations: {
+       self.childView.frame = CGRect(x: 0, y: 0, width: 0, height: 0)
+       self.childView.backgroundColor = UIColor.cyan
+     }, completion: { _ in
+       self.childView.removeFromSuperview()
+     })
+     */
   }
 }

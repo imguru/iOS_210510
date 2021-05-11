@@ -2,6 +2,7 @@
 import UIKit
 
 // iOS - Event 처리
+// "Cocoa Design Pattern"
 // 1. Delegate Pattern
 //  : 인터페이스 기반 이벤트 처리 방식
 // 2. Target-Action Pattern

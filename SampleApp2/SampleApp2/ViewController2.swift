@@ -6,7 +6,8 @@ import UIKit
 // => Interface 기반 이벤트 처리 방식
 //   1) dataSource: UIPickerViewDataSource
 //   2) delegate: UIPickerViewDelegate
-class ViewController2: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate, UITextFieldDelegate {
+// class ViewController2: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate, UITextFieldDelegate {
+class ViewController2: UIViewController {
   @IBOutlet var pickerView: UIPickerView!
   @IBOutlet var nameLabel: UILabel!
 
@@ -34,19 +35,31 @@ class ViewController2: UIViewController, UIPickerViewDataSource, UIPickerViewDel
     "kotlin2",
     "swift",
     "typescript",
+    "kotlin",
+    "kotlin2",
+    "swift",
+    "typescript",
+    "kotlin",
+    "kotlin2",
+    "swift",
+    "typescript",
   ]
 
   override func viewDidLoad() {
     super.viewDidLoad()
 
     // imageView.image = UIImage(named: "swift")
-    // imageView.image = #imageLiteral(resourceName: "kotlin")
+    // imageView.image = #imageLiteral(resourceName: "typescript")
 
     pickerView.dataSource = self
     pickerView.delegate = self
     textField.delegate = self
   }
+}
 
+// MARK: - UITextFieldDelegate
+
+extension ViewController2: UITextFieldDelegate {
   func textFieldShouldEndEditing(_ textField: UITextField) -> Bool {
     print("textFieldShouldEndEditing")
     return true
@@ -71,7 +84,11 @@ class ViewController2: UIViewController, UIPickerViewDataSource, UIPickerViewDel
 
     return newLength < 7
   }
+}
 
+// MARK: - UIPickerViewDataSource
+
+extension ViewController2: UIPickerViewDataSource {
   // returns the number of 'columns' to display.
   func numberOfComponents(in pickerView: UIPickerView) -> Int {
     return 1
@@ -84,7 +101,11 @@ class ViewController2: UIViewController, UIPickerViewDataSource, UIPickerViewDel
     // return data.count
     return images.count
   }
+}
 
+// MARK: - UIPickerViewDelegate
+
+extension ViewController2: UIPickerViewDelegate {
   func pickerView(_ pickerView: UIPickerView,
                   viewForRow row: Int,
                   forComponent component: Int,

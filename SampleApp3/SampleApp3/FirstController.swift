@@ -5,6 +5,8 @@ import UIKit
 // 1. addSubView
 // 2. removeFromSuperview
 
+// Keyboard가 올라오는 이벤트 - NotificationCenter
+
 class FirstController: UIViewController {
   @IBOutlet var childView: UIView!
 
@@ -12,6 +14,24 @@ class FirstController: UIViewController {
     super.viewDidLoad()
 
     // Do any additional setup after loading the view.
+    let notificationCenter = NotificationCenter.default
+    notificationCenter.addObserver(forName: UIResponder.keyboardWillShowNotification,
+                                   object: nil,
+                                   queue: .main) { notification in
+      
+      print("keyboardWillShowNotification")
+    }
+    
+    notificationCenter.addObserver(forName: UIResponder.keyboardWillHideNotification,
+                                   object: nil,
+                                   queue: .main) { notification in
+      
+      print("keyboardWillHideNotification")
+    }
+    
+    
+    
+    
   }
 
   @IBAction func onTapOpenButton(_ sender: UIButton) {

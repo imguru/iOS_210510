@@ -365,6 +365,9 @@
                             <constraint firstItem="LGq-3N-8uU" firstAttribute="top" secondItem="d5U-5g-FKA" secondAttribute="top" id="mHu-MW-4hv"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="captionImageView" destination="ZyN-EN-gP4" id="LWc-qD-Gvm"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dTy-44-a0U" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

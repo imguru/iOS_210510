@@ -1,6 +1,8 @@
 import UIKit
 
-class ResultController: UIViewController {
+class ResultController: UIViewController, NameControllerDelegate {
+  
+  
   @IBOutlet var nameLabel: UILabel!
 
   override func viewDidLoad() {
@@ -10,4 +12,19 @@ class ResultController: UIViewController {
   }
 
   @IBAction func unwind(segue: UIStoryboardSegue) {}
+  
+  override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    
+    if let controller = segue.destination as? NameController {
+      controller.delegate = self
+    }
+    
+  }
+  
+  // Delegate Pattern
+  func onValueChanged(name: String) {
+    nameLabel.text = name
+  }
 }
+
+

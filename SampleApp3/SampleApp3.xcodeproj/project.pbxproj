@@ -20,6 +20,8 @@
 		7A76E7A0264A662D00E51FA0 /* SecondController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7A76E79E264A662D00E51FA0 /* SecondController.xib */; };
 		7AED03CC264B62C100D2C9A3 /* SecondController2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AED03CB264B62C100D2C9A3 /* SecondController2.swift */; };
 		7AED03CE264B6A1500D2C9A3 /* ThirdController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AED03CD264B6A1500D2C9A3 /* ThirdController.swift */; };
+		7AED03D0264B6E4000D2C9A3 /* ResultController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AED03CF264B6E4000D2C9A3 /* ResultController.swift */; };
+		7AED03D2264B6E4E00D2C9A3 /* NameController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AED03D1264B6E4E00D2C9A3 /* NameController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +40,8 @@
 		7A76E79E264A662D00E51FA0 /* SecondController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SecondController.xib; sourceTree = "<group>"; };
 		7AED03CB264B62C100D2C9A3 /* SecondController2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondController2.swift; sourceTree = "<group>"; };
 		7AED03CD264B6A1500D2C9A3 /* ThirdController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdController.swift; sourceTree = "<group>"; };
+		7AED03CF264B6E4000D2C9A3 /* ResultController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultController.swift; sourceTree = "<group>"; };
+		7AED03D1264B6E4E00D2C9A3 /* NameController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +88,8 @@
 				7A76E79E264A662D00E51FA0 /* SecondController.xib */,
 				7AED03CB264B62C100D2C9A3 /* SecondController2.swift */,
 				7AED03CD264B6A1500D2C9A3 /* ThirdController.swift */,
+				7AED03CF264B6E4000D2C9A3 /* ResultController.swift */,
+				7AED03D1264B6E4E00D2C9A3 /* NameController.swift */,
 			);
 			path = SampleApp3;
 			sourceTree = "<group>";
@@ -163,8 +169,10 @@
 			files = (
 				7A76E797264A57A700E51FA0 /* FirstController.swift in Sources */,
 				7AED03CE264B6A1500D2C9A3 /* ThirdController.swift in Sources */,
+				7AED03D2264B6E4E00D2C9A3 /* NameController.swift in Sources */,
 				7A76E786264A565500E51FA0 /* ViewController.swift in Sources */,
 				7A76E782264A565500E51FA0 /* AppDelegate.swift in Sources */,
+				7AED03D0264B6E4000D2C9A3 /* ResultController.swift in Sources */,
 				7A76E79B264A65ED00E51FA0 /* FirstController2.swift in Sources */,
 				7AED03CC264B62C100D2C9A3 /* SecondController2.swift in Sources */,
 				7A76E79F264A662D00E51FA0 /* SecondController.swift in Sources */,

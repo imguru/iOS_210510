@@ -34,4 +34,10 @@ class ViewController: UIViewController {
     performSegue(withIdentifier: "ShowThirdSegue",
                  sender: self)
   }
+  
+  @IBAction func onTapOpen3(_ sender: UIButton) {
+    // XIB
+    let controller = FirstController()
+    present(controller, animated: true)
+  }
 }

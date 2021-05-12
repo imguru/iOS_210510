@@ -221,6 +221,10 @@
                                             </constraints>
                                         </collectionViewCellContentView>
                                         <size key="customSize" width="169" height="172"/>
+                                        <connections>
+                                            <outlet property="coverImageView" destination="6IY-ay-fKb" id="oEY-5u-mhd"/>
+                                            <outlet property="nameLabel" destination="8sq-Gv-4t3" id="aJ9-5o-xdT"/>
+                                        </connections>
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>

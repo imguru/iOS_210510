@@ -8,6 +8,12 @@ class TableController: UIViewController {
   @IBOutlet var tableView: UITableView!
   @IBOutlet var nameLabel: UILabel!
 
+  var data = [
+    "swift",
+    "kotlin",
+    "typescript"
+  ]
+
   override func viewDidLoad() {
     super.viewDidLoad()
 
@@ -22,10 +28,30 @@ class TableController: UIViewController {
     tableView.register(UINib(nibName: "MyCell", bundle: nil), forCellReuseIdentifier: "MyCell2")
   }
 
-  @IBAction func onTap(_ sender: UIButton) {}
+  @IBAction func onTap(_ sender: UIButton) {
+    data.append(["swift", "kotlin", "typescript"].shuffled().first!)
+
+    // Data가 변경되어서 tableView에 리로드가 필요하다.
+    // - Android: adapter.notifyDataSetChanged()
+    tableView.reloadData()
+  }
+}
+
+extension TableController: UITableViewDataSource {
+  func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    return data.count
+  }
+
+  func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    let cell = tableView.dequeueReusableCell(withIdentifier: "MyCell", for: indexPath)
+    cell.textLabel?.text = data[indexPath.row]
+    cell.imageView?.image = UIImage(named: data[indexPath.row])
+    return cell
+  }
 }
 
 extension TableController: UITableViewDelegate {
+  #if false
   func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
     print("didSelectRowAt - \(indexPath)")
     if indexPath.row % 2 == 0 {
@@ -34,6 +60,7 @@ extension TableController: UITableViewDelegate {
       nameLabel.text = "Kotlin"
     }
   }
+  #endif
 }
 
 // UITableView
@@ -47,6 +74,7 @@ extension TableController: UITableViewDelegate {
 // UITableView
 //  - IndexPath
 //   : section / row
+#if false
 extension TableController: UITableViewDataSource {
   func numberOfSections(in tableView: UITableView) -> Int {
     return 2
@@ -133,3 +161,4 @@ extension TableController: UITableViewDataSource {
   }
   #endif
 }
+#endif

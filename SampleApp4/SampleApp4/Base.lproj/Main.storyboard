@@ -23,7 +23,7 @@
                                 <state key="normal" title="Open"/>
                                 <connections>
                                     <action selector="open:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0Z9-Ic-ujU"/>
-                                    <segue destination="fqh-mW-Gi2" kind="show" id="OdM-Uc-HAM"/>
+                                    <segue destination="C7G-b6-hBM" kind="show" id="YrL-ay-1KL"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -35,10 +35,11 @@
             </objects>
             <point key="canvasLocation" x="-1505" y="270"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Forth-->
         <scene sceneID="9Pf-y3-qS4">
             <objects>
                 <navigationController id="fqh-mW-Gi2" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Forth" id="a2D-QT-Qm9"/>
                     <navigationItem key="navigationItem" id="pYa-u2-hIy"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="2PK-JD-leS">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="56"/>
@@ -52,7 +53,28 @@
             </objects>
             <point key="canvasLocation" x="-678" y="270"/>
         </scene>
-        <!--First Controller-->
+        <!--Tab Bar Controller-->
+        <scene sceneID="Qqe-AO-aNY">
+            <objects>
+                <tabBarController id="C7G-b6-hBM" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="CT1-H6-i15"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="sCD-kz-0dq">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="drW-WQ-Xzv" kind="relationship" relationship="viewControllers" id="P0h-eW-lZP"/>
+                        <segue destination="rmF-aD-nSd" kind="relationship" relationship="viewControllers" id="waC-Os-rum"/>
+                        <segue destination="lmx-XJ-pPy" kind="relationship" relationship="viewControllers" id="5yk-Rx-Iff"/>
+                        <segue destination="fqh-mW-Gi2" kind="relationship" relationship="viewControllers" id="1fY-l9-ZrV"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qCA-CC-XpI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1506" y="1032"/>
+        </scene>
+        <!--First-->
         <scene sceneID="Cda-T0-75m">
             <objects>
                 <viewController id="drW-WQ-Xzv" customClass="FirstController" customModule="SampleApp4" customModuleProvider="target" sceneMemberID="viewController">
@@ -72,13 +94,14 @@
                         <viewLayoutGuide key="safeArea" id="BbR-pI-jzY"/>
                         <color key="backgroundColor" systemColor="systemYellowColor"/>
                     </view>
+                    <tabBarItem key="tabBarItem" title="First" id="KpW-xN-xq8"/>
                     <navigationItem key="navigationItem" id="IZs-OT-b0x"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="h69-71-Wa6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="148" y="269.70443349753697"/>
         </scene>
-        <!--Second Controller-->
+        <!--Second-->
         <scene sceneID="HMQ-Tp-14a">
             <objects>
                 <viewController id="rmF-aD-nSd" customClass="SecondController" customModule="SampleApp4" customModuleProvider="target" sceneMemberID="viewController">
@@ -98,13 +121,14 @@
                         <viewLayoutGuide key="safeArea" id="skn-51-0Ih"/>
                         <color key="backgroundColor" systemColor="systemGreenColor"/>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Second" id="L2K-FU-cz0"/>
                     <navigationItem key="navigationItem" id="luJ-PY-VSU"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dzm-tx-fRW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="895" y="270"/>
         </scene>
-        <!--Third Controller-->
+        <!--Third-->
         <scene sceneID="mmo-it-aTZ">
             <objects>
                 <viewController id="lmx-XJ-pPy" customClass="ThirdController" customModule="SampleApp4" customModuleProvider="target" sceneMemberID="viewController">
@@ -114,6 +138,7 @@
                         <viewLayoutGuide key="safeArea" id="evO-NR-WTl"/>
                         <color key="backgroundColor" systemColor="systemTealColor"/>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Third" id="RpF-za-t1U"/>
                     <navigationItem key="navigationItem" id="OEv-Zm-cTM"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="h3f-4y-ADs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -121,6 +146,11 @@
             <point key="canvasLocation" x="1625" y="270"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="5yk-Rx-Iff"/>
+        <segue reference="waC-Os-rum"/>
+        <segue reference="Ahg-29-edi"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

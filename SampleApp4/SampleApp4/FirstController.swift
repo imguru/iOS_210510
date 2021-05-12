@@ -7,7 +7,7 @@ class FirstController: UIViewController {
     super.viewDidLoad()
 
     // Do any additional setup after loading the view.
-    title = "First Controller"
+    // title = "First Controller"
   }
 
   // Second Controller
@@ -24,6 +24,12 @@ class FirstController: UIViewController {
     // 현재의 ViewController가 NavigationController 안에 속해있다면,
     // navigationController 프로퍼티가 nil이 아닙니다.
 
-    navigationController?.pushViewController(controller, animated: true)
+    // navigationController?.pushViewController(controller, animated: true)
+    
+    // TabBarController에 포함되어 있을 경우, 아래의 프로퍼티가 유효합니다.
+    tabBarController?.selectedIndex = 1
   }
+  
+  
+  
 }

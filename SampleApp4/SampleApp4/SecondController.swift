@@ -6,7 +6,7 @@ class SecondController: UIViewController {
     super.viewDidLoad()
 
     // Do any additional setup after loading the view.
-    title = "SecondController"
+    // title = "SecondController"
   }
 
   override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {

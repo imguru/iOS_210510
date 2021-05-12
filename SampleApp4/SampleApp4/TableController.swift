@@ -13,6 +13,7 @@ class TableController: UIViewController {
 
     // Do any additional setup after loading the view.
     tableView.dataSource = self
+    tableView.delegate = self
 
     // Prototype Cell을 tableView에 등록합니다!!
     tableView.register(UITableViewCell.self, forCellReuseIdentifier: "MyCell")
@@ -22,6 +23,17 @@ class TableController: UIViewController {
   }
 
   @IBAction func onTap(_ sender: UIButton) {}
+}
+
+extension TableController: UITableViewDelegate {
+  func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    print("didSelectRowAt - \(indexPath)")
+    if indexPath.row % 2 == 0 {
+      nameLabel.text = "Typescript"
+    } else {
+      nameLabel.text = "Kotlin"
+    }
+  }
 }
 
 // UITableView
@@ -50,11 +62,13 @@ extension TableController: UITableViewDataSource {
   {
     if indexPath.row % 2 == 0 {
       let cell = tableView.dequeueReusableCell(withIdentifier: "MyCell", for: indexPath)
+      cell.selectionStyle = .none
       cell.imageView?.image = #imageLiteral(resourceName: "typescript")
       cell.textLabel?.text = "Typescript - \(indexPath)"
       return cell
     } else {
       let cell: MyCell! = tableView.dequeueReusableCell(withIdentifier: "MyCell2", for: indexPath) as? MyCell
+      cell.selectionStyle = .none
       cell.coverImageView.image = #imageLiteral(resourceName: "kotlin")
       cell.nameLabel.text = "Kotlin - \(indexPath)"
       return cell

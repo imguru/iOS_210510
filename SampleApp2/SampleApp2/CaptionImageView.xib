@@ -52,7 +52,7 @@
             <connections>
                 <outletCollection property="gestureRecognizers" destination="7MH-fr-ibF" appends="YES" id="BKj-fx-0aI"/>
             </connections>
-            <point key="canvasLocation" x="-536" y="20"/>
+            <point key="canvasLocation" x="-1024" y="-55"/>
         </view>
         <tapGestureRecognizer id="7MH-fr-ibF">
             <connections>

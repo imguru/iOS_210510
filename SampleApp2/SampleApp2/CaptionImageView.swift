@@ -50,11 +50,13 @@ class CaptionImageView: UIView {
 
   required init?(coder: NSCoder) {
     super.init(coder: coder)
+    print("init(coder:)")
     initSubviews()
   }
 
   func initSubviews() {
     // let nib = UINib(nibName: "CaptionImageView", bundle: nil)
+    // @IBDesignable 이 제대로 동작하지 않습니다.
 
     let nib = UINib(nibName: "CaptionImageView", bundle: Bundle(for: type(of: self)))
     nib.instantiate(withOwner: self, options: nil)

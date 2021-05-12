@@ -1,8 +1,6 @@
 import UIKit
 
-
 // 스위프트 / ObjC - '참조 계수 기반'의 객체 수명 관리
-
 
 // '참조 계수 기반'의 객체 수명 관리
 // 1) GC - Java/C#/Go ...
@@ -15,7 +13,7 @@ import UIKit
 //  - 컴파일러가 코드를 분석해서, 참조 계수 관련 코드를 자동으로 삽입합니다.
 //  - 객체의 파괴 시점이 명확합니다.
 //  - 런타임시에 누수의 위험성이 있기 때문에, 신경써서 코드를 작성해야 합니다.
-//------------------------------
+// ------------------------------
 
 // '소유권(Ownership)'
 // 1. 강한 참조
@@ -26,6 +24,7 @@ import UIKit
 // 2. 약한 참조
 //  : 참조 계수를 증가하지 않고 참조한다.
 //  => 객체를 참조하는 동안, 객체가 파괴될 가능성이 있습니다. = 댕글링 포인터
+//  => 클로저에서 ViewController를 참조할 때
 // unowned
 // weak
 
@@ -41,9 +40,9 @@ class Sample {
   init() {
     print("Sample 객체 생성")
   }
-  
+
   deinit {
-    print("~Sample()");
+    print("~Sample()")
   }
 }
 
@@ -54,14 +53,28 @@ class FirstController2: UIViewController {
     // Do any additional setup after loading the view.
   }
 
+  // val intent = Intent(this, MainActivity::class.java)
+  // startActivity(intent)
+
   @IBAction func onTapOpenButton(_ sender: UIButton) {
     // let controller = SecondController(nibName: "SecondController", bundle: nil)
 
     let controller = SecondController() // SecondController.xib
+    controller.user = User(name: "Tom", age: 42)
+    
+    // controller.nameLabel.text = "Tom"
+    // controller.ageLabel.text = "\(42)"
+    present(controller, animated: true) {
+      // present가 완료된 이후에 수행되는 블록 - 클로저
+      // controller.nameLabel.text = "Tom"
+      // controller.ageLabel.text = "\(42)"
+    }
+    
+    
     controller.modalPresentationStyle = .fullScreen
     // controller.modalPresentationStyle = .overFullScreen
     // controller.modalPresentationStyle = .overCurrentContext
-    present(controller, animated: true)
+    // present(controller, animated: true)
 
     /*
      let alertController = UIAlertController(title: "Alert!", message: "Hello!", preferredStyle: .actionSheet)
@@ -87,49 +100,48 @@ class FirstController2: UIViewController {
      present(controller, animated: true)
      */
   }
-  
-  
+
   /*
-  @IBAction func onTouch(_ sender: UIButton) {
-    var sample1: Sample? = Sample()
-    // Sample [ ref = 1 ]
-    var sample2: Sample? = sample1
-    // Sample [ ref = 2 ]
-    
-    print("Do someting...")
-    
-    sample1 = nil
-    // Sample [ ref = 1 ]
-    print("after sample1 = nil")
-    sample2 = nil
-    // Sample [ ref = 0 ] -> ~Sample()
-    print("after sample2 = nil")
-    print("End....")
-  }
-  */
-  
+   @IBAction func onTouch(_ sender: UIButton) {
+     var sample1: Sample? = Sample()
+     // Sample [ ref = 1 ]
+     var sample2: Sample? = sample1
+     // Sample [ ref = 2 ]
+
+     print("Do someting...")
+
+     sample1 = nil
+     // Sample [ ref = 1 ]
+     print("after sample1 = nil")
+     sample2 = nil
+     // Sample [ ref = 0 ] -> ~Sample()
+     print("after sample2 = nil")
+     print("End....")
+   }
+   */
+
   /*
-  @IBAction func onTouch(_ sender: UIButton) {
-    let node1 = Node()
-    let node2 = Node()
-    
-    node1.next = node2
-    node2.next = node1
-  }
-  */
-  
+   @IBAction func onTouch(_ sender: UIButton) {
+     let node1 = Node()
+     let node2 = Node()
+
+     node1.next = node2
+     node2.next = node1
+   }
+   */
+
   @IBAction func onTouch(_ sender: UIButton) {
     var node1: Node? = Node()
     let node2: Node? = Node()
-    
+
     node1?.next = node2
     node2?.next = node1
-    
+
     node1 = nil
     print("node1 = nil")
-    
+
     print(node2?.next)
-    
+
     print("function end")
   }
 }
@@ -137,9 +149,9 @@ class FirstController2: UIViewController {
 class Node {
   var value: Int = 0
   // unowned var next: Node? = nil  // 참조 계수를 증가시키지 않습니다.
-  weak var next: Node? = nil
+  weak var next: Node?
   // autoniling => 객체가 파괴되면, 자동으로 nil로 변경됩니다.
-  
+
   deinit {
     print("~Node()")
   }

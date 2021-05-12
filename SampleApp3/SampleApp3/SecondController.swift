@@ -1,18 +1,36 @@
 
 import UIKit
 
+struct User {
+  let name: String
+  let age: Int
+}
+
 class SecondController: UIViewController {
   deinit {
     print("~SecondController()")
   }
   
-  @IBOutlet var textField: UITextField!
+  @IBOutlet var nameLabel: UILabel!
+  @IBOutlet var ageLabel: UILabel!
   
+  var user: User?
+  
+  
+  
+  @IBOutlet var textField: UITextField!
   var observer: NSObjectProtocol?
 
+  // Fragment - OnViewCreated
   override func viewDidLoad() {
     super.viewDidLoad()
     print("SecondController()")
+    
+    if let user = user {
+      nameLabel.text = user.name
+      ageLabel.text = "\(user.age)"
+    }
+    
 
     // Do any additional setup after loading the view.
     // 1. self - weak

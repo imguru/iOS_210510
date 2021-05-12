@@ -149,6 +149,9 @@
                         <viewLayoutGuide key="safeArea" id="PNL-N6-haD"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <connections>
+                        <outlet property="nameLabel" destination="Bof-kd-XYe" id="07C-xN-7NB"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jD1-lY-Osw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -173,14 +176,21 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="48"/>
                                 <state key="normal" title="Close"/>
+                                <connections>
+                                    <segue destination="15F-Kz-dc0" kind="unwind" unwindAction="unwindWithSegue:" id="RX6-6U-LeZ"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="jZD-wi-Qm7"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" id="ZM5-k7-mwo"/>
+                    <connections>
+                        <outlet property="nameField" destination="sP8-en-sI0" id="RvJ-Um-Kcq"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="D3L-Jc-nQJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="15F-Kz-dc0" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="268" y="1715.7635467980297"/>
         </scene>

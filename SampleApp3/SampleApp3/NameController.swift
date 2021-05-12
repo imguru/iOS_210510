@@ -10,6 +10,9 @@ class NameController: UIViewController {
   
   var delegate: NameControllerDelegate?
   
+  // 2. 함수
+  var onValueChanged: ((String) -> Void)?
+
   override func viewDidLoad() {
     super.viewDidLoad()
 
@@ -20,7 +23,9 @@ class NameController: UIViewController {
     super.viewWillDisappear(animated)
     
     if let text = nameField.text {
-      delegate?.onValueChanged(name: text)
+      // delegate?.onValueChanged(name: text)
+      
+      onValueChanged?(text)
     }
   }
   

@@ -38,9 +38,28 @@ extension TableController: UITableViewDataSource {
     return 10
   }
 
+  func tableView(_ tableView: UITableView,
+                 cellForRowAt indexPath: IndexPath) -> UITableViewCell
+  {
+    var cell: MyCell! = tableView.dequeueReusableCell(withIdentifier: "MyCell") as? MyCell
+    if (cell == nil) {
+      print("새롭게 생성 - \(indexPath)")
+      cell = Bundle.main.loadNibNamed("MyCell", owner: nil, options: nil)?[0] as? MyCell
+    } else {
+      print("재활용 - \(indexPath)")
+    }
+    
+    cell.nameLabel.text = "Hello - \(indexPath)"
+    cell.coverImageView.image = #imageLiteral(resourceName: "swift")
+    
+    return cell
+  }
+  
+  
+  
   // func tableView.dequeueReusableCell(withIdentifier: String) -> UITableViewCell?
   // - 재활용 가능한 Cell이 없을 경우, nil을 반환합니다.
-  
+  #if false
   func tableView(_ tableView: UITableView,
                  cellForRowAt indexPath: IndexPath) -> UITableViewCell
   {
@@ -56,6 +75,7 @@ extension TableController: UITableViewDataSource {
     cell.detailTextLabel?.text = "Detail text"
     return cell
   }
+  #endif
 
   // 아래의 메소드에서 화면에 필요한 View만 생성하고,
   // 재활용 가능하도록 작성되어야 합니다.

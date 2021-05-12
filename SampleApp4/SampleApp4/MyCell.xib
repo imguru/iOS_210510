@@ -39,7 +39,11 @@
                     <constraint firstAttribute="trailing" secondItem="ZB8-Sp-qUx" secondAttribute="trailing" id="y5E-1v-N5d"/>
                 </constraints>
             </tableViewCellContentView>
-            <point key="canvasLocation" x="-142" y="95"/>
+            <connections>
+                <outlet property="coverImageView" destination="Vxv-Ie-XY5" id="k0g-n3-4AL"/>
+                <outlet property="nameLabel" destination="ZB8-Sp-qUx" id="Xzt-yb-uBX"/>
+            </connections>
+            <point key="canvasLocation" x="-142.40000000000001" y="94.581280788177338"/>
         </tableViewCell>
     </objects>
 </document>

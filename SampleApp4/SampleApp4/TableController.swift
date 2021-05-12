@@ -32,13 +32,17 @@ class TableController: UIViewController {
 //   : section / row
 
 extension TableController: UITableViewDataSource {
+  func numberOfSections(in tableView: UITableView) -> Int {
+      return 2
+  }
+  
   func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
     return 10
   }
   
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     let cell = UITableViewCell()
-    cell.textLabel?.text = "Hello"
+    cell.textLabel?.text = "Hello - \(indexPath)"
     return cell
   }
 }

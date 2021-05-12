@@ -19,6 +19,7 @@
 		7A76E79F264A662D00E51FA0 /* SecondController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A76E79D264A662D00E51FA0 /* SecondController.swift */; };
 		7A76E7A0264A662D00E51FA0 /* SecondController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7A76E79E264A662D00E51FA0 /* SecondController.xib */; };
 		7AED03CC264B62C100D2C9A3 /* SecondController2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AED03CB264B62C100D2C9A3 /* SecondController2.swift */; };
+		7AED03CE264B6A1500D2C9A3 /* ThirdController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AED03CD264B6A1500D2C9A3 /* ThirdController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		7A76E79D264A662D00E51FA0 /* SecondController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondController.swift; sourceTree = "<group>"; };
 		7A76E79E264A662D00E51FA0 /* SecondController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SecondController.xib; sourceTree = "<group>"; };
 		7AED03CB264B62C100D2C9A3 /* SecondController2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondController2.swift; sourceTree = "<group>"; };
+		7AED03CD264B6A1500D2C9A3 /* ThirdController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +83,7 @@
 				7A76E79D264A662D00E51FA0 /* SecondController.swift */,
 				7A76E79E264A662D00E51FA0 /* SecondController.xib */,
 				7AED03CB264B62C100D2C9A3 /* SecondController2.swift */,
+				7AED03CD264B6A1500D2C9A3 /* ThirdController.swift */,
 			);
 			path = SampleApp3;
 			sourceTree = "<group>";
@@ -159,6 +162,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7A76E797264A57A700E51FA0 /* FirstController.swift in Sources */,
+				7AED03CE264B6A1500D2C9A3 /* ThirdController.swift in Sources */,
 				7A76E786264A565500E51FA0 /* ViewController.swift in Sources */,
 				7A76E782264A565500E51FA0 /* AppDelegate.swift in Sources */,
 				7A76E79B264A65ED00E51FA0 /* FirstController2.swift in Sources */,

@@ -76,21 +76,41 @@
             </objects>
             <point key="canvasLocation" x="354" y="216"/>
         </scene>
-        <!--View Controller-->
+        <!--Third Controller-->
         <scene sceneID="sIY-fG-EQ8">
             <objects>
-                <viewController id="FkZ-cW-Yhn" sceneMemberID="viewController">
+                <viewController id="FkZ-cW-Yhn" customClass="ThirdController" customModule="SampleApp3" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="CoU-3A-KW3">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="758"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q6B-PQ-aOp">
+                                <rect key="frame" x="131" y="143" width="112" height="58"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="48"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HmH-cP-aqv">
+                                <rect key="frame" x="131" y="209" width="112" height="58"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="48"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="8X4-PJ-E6E"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" id="lle-Fx-bel"/>
+                    <connections>
+                        <outlet property="ageLabel" destination="HmH-cP-aqv" id="gmf-F7-XtQ"/>
+                        <outlet property="nameLabel" destination="q6B-PQ-aOp" id="wcC-gc-cVD"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pi0-jW-4S8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="353" y="927"/>
+            <point key="canvasLocation" x="-514.39999999999998" y="980.54187192118229"/>
         </scene>
     </scenes>
     <resources>

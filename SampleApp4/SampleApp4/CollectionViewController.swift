@@ -33,7 +33,7 @@ extension CollectionViewController: UICollectionViewDelegateFlowLayout {
                       layout collectionViewLayout: UICollectionViewLayout,
                       sizeForItemAt _: IndexPath) -> CGSize
   {
-    let width = (collectionView.frame.size.width - 20) / 2
+    let width = (collectionView.frame.size.width - 30) / 3
     return CGSize(width: width, height: width)
   }
 }

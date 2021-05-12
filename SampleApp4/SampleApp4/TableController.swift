@@ -13,6 +13,11 @@ class TableController: UIViewController {
 
     // Do any additional setup after loading the view.
     tableView.dataSource = self
+    
+    // Prototype Cell을 tableView에 등록합니다!!
+    tableView.register(UITableViewCell.self, forCellReuseIdentifier: "MyCell")
+    
+    
   }
 
   @IBAction func onTap(_ sender: UIButton) {}
@@ -38,6 +43,18 @@ extension TableController: UITableViewDataSource {
     return 10
   }
 
+  
+  // reason: 'unable to dequeue a cell with identifier MyCell - must register a nib or a class for the identifier
+  func tableView(_ tableView: UITableView,
+                 cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    let cell = tableView.dequeueReusableCell(withIdentifier: "MyCell", for: indexPath)
+    cell.imageView?.image = #imageLiteral(resourceName: "typescript")
+    cell.textLabel?.text = "Typescript - \(indexPath)"
+    return cell
+  }
+  
+
+  #if false
   // 주의사항 - MyCell.xib
   //       => reuseIdentifier를 지정해주어야 합니다.
   func tableView(_ tableView: UITableView,
@@ -63,7 +80,9 @@ extension TableController: UITableViewDataSource {
     
     return cell
   }
+  #endif
   
+ 
   
   
   // func tableView.dequeueReusableCell(withIdentifier: String) -> UITableViewCell?

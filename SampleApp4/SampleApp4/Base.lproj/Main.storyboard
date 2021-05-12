@@ -23,7 +23,6 @@
                                 <state key="normal" title="Open"/>
                                 <connections>
                                     <action selector="open:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0Z9-Ic-ujU"/>
-                                    <segue destination="WdA-3v-K5S" kind="show" id="zOe-D6-BCD"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -33,7 +32,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1505" y="270"/>
+            <point key="canvasLocation" x="-1930" y="281"/>
         </scene>
         <!--Table Controller2-->
         <scene sceneID="UL9-Yy-Bk0">

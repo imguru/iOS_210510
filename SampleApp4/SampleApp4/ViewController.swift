@@ -23,8 +23,8 @@ class ViewController: UIViewController {
 //
 //    present(naviController, animated: true)
 
-//    let controller = TableController()
-//    controller.modalPresentationStyle = .fullScreen
-//    present(controller, animated: true)
+    let controller = TableController()
+    controller.modalPresentationStyle = .fullScreen
+    present(controller, animated: true)
   }
 }

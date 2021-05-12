@@ -51,8 +51,15 @@ extension TableController: UITableViewDataSource {
       print("재활용 - \(indexPath)")
     }
     
-    cell.nameLabel.text = "Hello - \(indexPath)"
-    cell.coverImageView.image = #imageLiteral(resourceName: "swift")
+    
+    if indexPath.row % 2 == 0 {
+      cell.coverImageView.image = #imageLiteral(resourceName: "swift")
+      cell.nameLabel.text = "Swift - \(indexPath)"
+    } else {
+      cell.coverImageView.image = #imageLiteral(resourceName: "kotlin")
+      cell.nameLabel.text = "Kotlin - \(indexPath)"
+    }
+    
     
     return cell
   }

@@ -13,11 +13,12 @@ class TableController: UIViewController {
 
     // Do any additional setup after loading the view.
     tableView.dataSource = self
-    
+
     // Prototype Cell을 tableView에 등록합니다!!
     tableView.register(UITableViewCell.self, forCellReuseIdentifier: "MyCell")
-    
-    
+
+    // MyCell.xib
+    tableView.register(UINib(nibName: "MyCell", bundle: nil), forCellReuseIdentifier: "MyCell2")
   }
 
   @IBAction func onTap(_ sender: UIButton) {}
@@ -43,16 +44,22 @@ extension TableController: UITableViewDataSource {
     return 10
   }
 
-  
   // reason: 'unable to dequeue a cell with identifier MyCell - must register a nib or a class for the identifier
   func tableView(_ tableView: UITableView,
-                 cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-    let cell = tableView.dequeueReusableCell(withIdentifier: "MyCell", for: indexPath)
-    cell.imageView?.image = #imageLiteral(resourceName: "typescript")
-    cell.textLabel?.text = "Typescript - \(indexPath)"
-    return cell
+                 cellForRowAt indexPath: IndexPath) -> UITableViewCell
+  {
+    if indexPath.row % 2 == 0 {
+      let cell = tableView.dequeueReusableCell(withIdentifier: "MyCell", for: indexPath)
+      cell.imageView?.image = #imageLiteral(resourceName: "typescript")
+      cell.textLabel?.text = "Typescript - \(indexPath)"
+      return cell
+    } else {
+      let cell: MyCell! = tableView.dequeueReusableCell(withIdentifier: "MyCell2", for: indexPath) as? MyCell
+      cell.coverImageView.image = #imageLiteral(resourceName: "kotlin")
+      cell.nameLabel.text = "Kotlin - \(indexPath)"
+      return cell
+    }
   }
-  
 
   #if false
   // 주의사항 - MyCell.xib
@@ -61,14 +68,13 @@ extension TableController: UITableViewDataSource {
                  cellForRowAt indexPath: IndexPath) -> UITableViewCell
   {
     var cell: MyCell! = tableView.dequeueReusableCell(withIdentifier: "MyCell") as? MyCell
-    if (cell == nil) {
+    if cell == nil {
       print("새롭게 생성 - \(indexPath)")
       cell = Bundle.main.loadNibNamed("MyCell", owner: nil, options: nil)?[0] as? MyCell
     } else {
       print("재활용 - \(indexPath)")
     }
-    
-    
+
     if indexPath.row % 2 == 0 {
       cell.coverImageView.image = #imageLiteral(resourceName: "swift")
       cell.nameLabel.text = "Swift - \(indexPath)"
@@ -76,15 +82,11 @@ extension TableController: UITableViewDataSource {
       cell.coverImageView.image = #imageLiteral(resourceName: "kotlin")
       cell.nameLabel.text = "Kotlin - \(indexPath)"
     }
-    
-    
+
     return cell
   }
   #endif
-  
- 
-  
-  
+
   // func tableView.dequeueReusableCell(withIdentifier: String) -> UITableViewCell?
   // - 재활용 가능한 Cell이 없을 경우, nil을 반환합니다.
   #if false
@@ -98,7 +100,7 @@ extension TableController: UITableViewDataSource {
     } else {
       print("재활용 - \(indexPath)")
     }
-    
+
     cell.textLabel?.text = "Hello - \(indexPath)"
     cell.detailTextLabel?.text = "Detail text"
     return cell

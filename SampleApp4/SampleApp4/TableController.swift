@@ -38,6 +38,8 @@ extension TableController: UITableViewDataSource {
     return 10
   }
 
+  // 주의사항 - MyCell.xib
+  //       => reuseIdentifier를 지정해주어야 합니다.
   func tableView(_ tableView: UITableView,
                  cellForRowAt indexPath: IndexPath) -> UITableViewCell
   {

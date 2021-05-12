@@ -26,6 +26,8 @@
 		7AED0408264BA1CC00D2C9A3 /* TableController2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AED0407264BA1CC00D2C9A3 /* TableController2.swift */; };
 		7AED040A264BA93900D2C9A3 /* MyCell2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AED0409264BA93900D2C9A3 /* MyCell2.swift */; };
 		7AED040C264BB66500D2C9A3 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AED040B264BB66500D2C9A3 /* TableViewController.swift */; };
+		7AED040E264BBCFD00D2C9A3 /* CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AED040D264BBCFD00D2C9A3 /* CollectionViewController.swift */; };
+		7AED0410264BBF6600D2C9A3 /* MyColCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AED040F264BBF6600D2C9A3 /* MyColCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +52,8 @@
 		7AED0407264BA1CC00D2C9A3 /* TableController2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableController2.swift; sourceTree = "<group>"; };
 		7AED0409264BA93900D2C9A3 /* MyCell2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCell2.swift; sourceTree = "<group>"; };
 		7AED040B264BB66500D2C9A3 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
+		7AED040D264BBCFD00D2C9A3 /* CollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewController.swift; sourceTree = "<group>"; };
+		7AED040F264BBF6600D2C9A3 /* MyColCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyColCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +106,8 @@
 				7AED0407264BA1CC00D2C9A3 /* TableController2.swift */,
 				7AED0409264BA93900D2C9A3 /* MyCell2.swift */,
 				7AED040B264BB66500D2C9A3 /* TableViewController.swift */,
+				7AED040D264BBCFD00D2C9A3 /* CollectionViewController.swift */,
+				7AED040F264BBF6600D2C9A3 /* MyColCell.swift */,
 			);
 			path = SampleApp4;
 			sourceTree = "<group>";
@@ -181,8 +187,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7AED040E264BBCFD00D2C9A3 /* CollectionViewController.swift in Sources */,
 				7AED0401264B925B00D2C9A3 /* TableController.swift in Sources */,
 				7AED0408264BA1CC00D2C9A3 /* TableController2.swift in Sources */,
+				7AED0410264BBF6600D2C9A3 /* MyColCell.swift in Sources */,
 				7AED03F5264B776000D2C9A3 /* FirstController.swift in Sources */,
 				7AED03FD264B777A00D2C9A3 /* ThirdController.swift in Sources */,
 				7AED03E4264B768800D2C9A3 /* ViewController.swift in Sources */,

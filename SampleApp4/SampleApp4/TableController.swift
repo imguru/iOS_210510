@@ -46,13 +46,14 @@ extension TableController: UITableViewDataSource {
   {
     var cell: UITableViewCell! = tableView.dequeueReusableCell(withIdentifier: "MyCell")
     if cell == nil {
-      cell = UITableViewCell(style: .default, reuseIdentifier: "MyCell")
+      cell = UITableViewCell(style: .subtitle, reuseIdentifier: "MyCell")
       print("새롭게 생성 - \(indexPath)")
     } else {
       print("재활용 - \(indexPath)")
     }
     
     cell.textLabel?.text = "Hello - \(indexPath)"
+    cell.detailTextLabel?.text = "Detail text"
     return cell
   }
 

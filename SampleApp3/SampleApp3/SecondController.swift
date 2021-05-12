@@ -16,8 +16,6 @@ class SecondController: UIViewController {
   
   var user: User?
   
-  
-  
   @IBOutlet var textField: UITextField!
   var observer: NSObjectProtocol?
 
@@ -31,7 +29,6 @@ class SecondController: UIViewController {
       ageLabel.text = "\(user.age)"
     }
     
-
     // Do any additional setup after loading the view.
     // 1. self - weak
     /*

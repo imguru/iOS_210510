@@ -19,6 +19,8 @@
 		7AED03FA264B776C00D2C9A3 /* SecondController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7AED03F8264B776C00D2C9A3 /* SecondController.xib */; };
 		7AED03FD264B777A00D2C9A3 /* ThirdController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AED03FB264B777A00D2C9A3 /* ThirdController.swift */; };
 		7AED03FE264B777A00D2C9A3 /* ThirdController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7AED03FC264B777A00D2C9A3 /* ThirdController.xib */; };
+		7AED0401264B925B00D2C9A3 /* TableController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AED03FF264B925B00D2C9A3 /* TableController.swift */; };
+		7AED0402264B925B00D2C9A3 /* TableController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7AED0400264B925B00D2C9A3 /* TableController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +38,8 @@
 		7AED03F8264B776C00D2C9A3 /* SecondController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SecondController.xib; sourceTree = "<group>"; };
 		7AED03FB264B777A00D2C9A3 /* ThirdController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdController.swift; sourceTree = "<group>"; };
 		7AED03FC264B777A00D2C9A3 /* ThirdController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ThirdController.xib; sourceTree = "<group>"; };
+		7AED03FF264B925B00D2C9A3 /* TableController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableController.swift; sourceTree = "<group>"; };
+		7AED0400264B925B00D2C9A3 /* TableController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TableController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +85,8 @@
 				7AED03F8264B776C00D2C9A3 /* SecondController.xib */,
 				7AED03FB264B777A00D2C9A3 /* ThirdController.swift */,
 				7AED03FC264B777A00D2C9A3 /* ThirdController.xib */,
+				7AED03FF264B925B00D2C9A3 /* TableController.swift */,
+				7AED0400264B925B00D2C9A3 /* TableController.xib */,
 			);
 			path = SampleApp4;
 			sourceTree = "<group>";
@@ -147,6 +153,7 @@
 				7AED03E9264B768800D2C9A3 /* Assets.xcassets in Resources */,
 				7AED03FA264B776C00D2C9A3 /* SecondController.xib in Resources */,
 				7AED03E7264B768800D2C9A3 /* Main.storyboard in Resources */,
+				7AED0402264B925B00D2C9A3 /* TableController.xib in Resources */,
 				7AED03FE264B777A00D2C9A3 /* ThirdController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -158,6 +165,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7AED0401264B925B00D2C9A3 /* TableController.swift in Sources */,
 				7AED03F5264B776000D2C9A3 /* FirstController.swift in Sources */,
 				7AED03FD264B777A00D2C9A3 /* ThirdController.swift in Sources */,
 				7AED03E4264B768800D2C9A3 /* ViewController.swift in Sources */,

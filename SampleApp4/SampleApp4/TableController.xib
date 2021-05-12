@@ -20,8 +20,8 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="insetGrouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="n5x-Ej-RW1">
-                    <rect key="frame" x="16" y="44" width="343" height="672"/>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="80" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="n5x-Ej-RW1">
+                    <rect key="frame" x="0.0" y="44" width="375" height="672"/>
                 </tableView>
                 <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="Xnu-eh-WWQ">
                     <rect key="frame" x="16" y="732" width="343" height="46"/>
@@ -47,8 +47,8 @@
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
                 <constraint firstItem="Xnu-eh-WWQ" firstAttribute="top" secondItem="n5x-Ej-RW1" secondAttribute="bottom" constant="16" id="H8T-FZ-DLj"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="n5x-Ej-RW1" secondAttribute="trailing" constant="16" id="MJS-j8-JUG"/>
-                <constraint firstItem="n5x-Ej-RW1" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="MTh-mT-Kyl"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="n5x-Ej-RW1" secondAttribute="trailing" id="MJS-j8-JUG"/>
+                <constraint firstItem="n5x-Ej-RW1" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="MTh-mT-Kyl"/>
                 <constraint firstItem="Xnu-eh-WWQ" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="THd-D9-rOD"/>
                 <constraint firstItem="n5x-Ej-RW1" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="VEx-Xv-nPo"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="Xnu-eh-WWQ" secondAttribute="bottom" id="fSF-rt-aqw"/>

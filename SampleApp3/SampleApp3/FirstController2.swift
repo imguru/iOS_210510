@@ -25,9 +25,9 @@ import UIKit
 
 // 2. 약한 참조
 //  : 참조 계수를 증가하지 않고 참조한다.
-//  => 객체를 참조하는 동안, 객체가 파괴될 가능성이 있습니다.
-
-
+//  => 객체를 참조하는 동안, 객체가 파괴될 가능성이 있습니다. = 댕글링 포인터
+// unowned
+// weak
 
 // ViewController 전환
 // 1. present
@@ -37,7 +37,6 @@ import UIKit
 // 2. dismiss
 //   - 자신의 컨트롤러 위에 컨트롤러가 존재한다면, 자식 컨트롤러를 제거하고, 자식 컨트롤러가 존재하지 않는다면,
 //     자신이 제거됩니다.
-
 class Sample {
   init() {
     print("Sample 객체 생성")
@@ -109,19 +108,37 @@ class FirstController2: UIViewController {
   }
   */
   
+  /*
   @IBAction func onTouch(_ sender: UIButton) {
     let node1 = Node()
     let node2 = Node()
     
     node1.next = node2
     node2.next = node1
+  }
+  */
   
+  @IBAction func onTouch(_ sender: UIButton) {
+    var node1: Node? = Node()
+    let node2: Node? = Node()
+    
+    node1?.next = node2
+    node2?.next = node1
+    
+    node1 = nil
+    print("node1 = nil")
+    
+    print(node2?.next)
+    
+    print("function end")
   }
 }
 
 class Node {
   var value: Int = 0
-  weak var next: Node? = nil  // 참조 계수를 증가시키지 않습니다.
+  // unowned var next: Node? = nil  // 참조 계수를 증가시키지 않습니다.
+  weak var next: Node? = nil
+  // autoniling => 객체가 파괴되면, 자동으로 nil로 변경됩니다.
   
   deinit {
     print("~Node()")

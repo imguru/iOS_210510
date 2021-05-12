@@ -37,6 +37,9 @@ class SecondController: UIViewController {
      }
      */
     
+    // ViewController -> Closure
+    // Closure -> ViewController
+    
     let notificationCenter = NotificationCenter.default
     observer = notificationCenter.addObserver(forName: UIResponder.keyboardWillShowNotification,
                                               object: nil,

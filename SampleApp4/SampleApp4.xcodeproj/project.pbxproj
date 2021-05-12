@@ -23,6 +23,7 @@
 		7AED0402264B925B00D2C9A3 /* TableController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7AED0400264B925B00D2C9A3 /* TableController.xib */; };
 		7AED0405264B99C900D2C9A3 /* MyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AED0403264B99C900D2C9A3 /* MyCell.swift */; };
 		7AED0406264B99C900D2C9A3 /* MyCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7AED0404264B99C900D2C9A3 /* MyCell.xib */; };
+		7AED0408264BA1CC00D2C9A3 /* TableController2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AED0407264BA1CC00D2C9A3 /* TableController2.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +45,7 @@
 		7AED0400264B925B00D2C9A3 /* TableController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TableController.xib; sourceTree = "<group>"; };
 		7AED0403264B99C900D2C9A3 /* MyCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCell.swift; sourceTree = "<group>"; };
 		7AED0404264B99C900D2C9A3 /* MyCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyCell.xib; sourceTree = "<group>"; };
+		7AED0407264BA1CC00D2C9A3 /* TableController2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableController2.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +95,7 @@
 				7AED0400264B925B00D2C9A3 /* TableController.xib */,
 				7AED0403264B99C900D2C9A3 /* MyCell.swift */,
 				7AED0404264B99C900D2C9A3 /* MyCell.xib */,
+				7AED0407264BA1CC00D2C9A3 /* TableController2.swift */,
 			);
 			path = SampleApp4;
 			sourceTree = "<group>";
@@ -173,6 +176,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7AED0401264B925B00D2C9A3 /* TableController.swift in Sources */,
+				7AED0408264BA1CC00D2C9A3 /* TableController2.swift in Sources */,
 				7AED03F5264B776000D2C9A3 /* FirstController.swift in Sources */,
 				7AED03FD264B777A00D2C9A3 /* ThirdController.swift in Sources */,
 				7AED03E4264B768800D2C9A3 /* ViewController.swift in Sources */,

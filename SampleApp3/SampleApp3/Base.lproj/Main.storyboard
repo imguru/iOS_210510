@@ -23,7 +23,16 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="48"/>
                                 <state key="normal" title="Open"/>
                                 <connections>
-                                    <segue destination="qV9-A1-2fc" kind="show" id="w37-Ma-Mhu"/>
+                                    <segue destination="qV9-A1-2fc" kind="show" identifier="ShowSecondSegue" id="w37-Ma-Mhu"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rQg-a5-yc6">
+                                <rect key="frame" x="87" y="506" width="201" height="184"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="48"/>
+                                <state key="normal" title="Open2"/>
+                                <connections>
+                                    <action selector="onTapOpen2:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Rm6-Lk-zIY"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -31,6 +40,9 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" id="Zbg-VV-uvj"/>
+                    <connections>
+                        <segue destination="FkZ-cW-Yhn" kind="show" identifier="ShowThirdSegue" id="vy0-0d-3Xa"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -63,6 +75,22 @@
                 <exit id="oFx-uW-Hqs" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="354" y="216"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="sIY-fG-EQ8">
+            <objects>
+                <viewController id="FkZ-cW-Yhn" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="CoU-3A-KW3">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="758"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="8X4-PJ-E6E"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="lle-Fx-bel"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pi0-jW-4S8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="353" y="927"/>
         </scene>
     </scenes>
     <resources>

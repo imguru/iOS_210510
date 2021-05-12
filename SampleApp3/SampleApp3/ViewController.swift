@@ -12,4 +12,14 @@ class ViewController: UIViewController {
     print("unwind")
   }
   
+  
+  // 1. performSegue(withIdentifier:)
+  
+  @IBAction func onTapOpen2(_ sender: UIButton) {
+    // "ShowSecondSegue"
+    // performSegue(withIdentifier: "ShowSecondSegue", sender: self)
+    
+    performSegue(withIdentifier: "ShowThirdSegue", sender: self)
+  }
+
 }

@@ -1,29 +1,22 @@
-//
-//  ThirdController.swift
-//  SampleApp4
-//
-//  Created by Chansik Yun on 2021/05/12.
-//
 
 import UIKit
 
 class ThirdController: UIViewController {
+  override func viewDidLoad() {
+    super.viewDidLoad()
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    // Do any additional setup after loading the view.
+  }
 
-        // Do any additional setup after loading the view.
-    }
-
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+  // ViewController
+  //     | present / dismiss
+  // NavigationController
+  //                                      pushViewController
+  //     - rootViewController: FirstController -> SecondController -> ThirdController
+  //                                      popViewController
+  override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+    // dismiss(animated: true)
+    // navigationController?.popViewController(animated: true)
+    navigationController?.popToRootViewController(animated: true)
+  }
 }

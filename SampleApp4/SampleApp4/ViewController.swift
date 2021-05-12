@@ -18,9 +18,9 @@ class ViewController: UIViewController {
   }
   
   @IBAction func open(_ sender: UIButton) {
-    let rootController = FirstController()
-    let naviController = UINavigationController(rootViewController: rootController)
-    
-    present(naviController, animated: true)
+//    let rootController = FirstController()
+//    let naviController = UINavigationController(rootViewController: rootController)
+//    
+//    present(naviController, animated: true)
   }
 }

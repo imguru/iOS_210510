@@ -17,7 +17,6 @@ extension TableController2: UITableViewDataSource {
     return 20
   }
 
-  
   // Storyboard - UITableView
   // => Prototype(견본) Cell
   // => 견본이 등록되어 있다면, 재활용 가능한 Cell이 없을 경우, tableView가 생성해서 반환해줍니다.
@@ -25,12 +24,26 @@ extension TableController2: UITableViewDataSource {
   //  tableView.dequeueReusableCell(withIdentifier: "MyCell") -> UITableViewCell?
   // * 견본이 등록되어 있다면
   //  tableView.dequeueReusableCell(withIdentifier: String, for: IndexPath) -> UITableViewCell
-  
+
+  func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    if indexPath.row % 2 == 0 {
+      let cell: MyCell2! = tableView.dequeueReusableCell(withIdentifier: "MyCell2", for: indexPath) as? MyCell2
+      cell.nameLabel.text = "Swift - \(indexPath)"
+      cell.coverImageView.image = #imageLiteral(resourceName: "swift")
+      return cell
+    } else {
+      let cell = tableView.dequeueReusableCell(withIdentifier: "MyCell", for: indexPath)
+      return cell
+    }
+  }
+
+  #if false
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     let cell = tableView.dequeueReusableCell(withIdentifier: "MyCell", for: indexPath)
     return cell
   }
-  
+  #endif
+
   #if false
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     var cell: UITableViewCell! = tableView.dequeueReusableCell(withIdentifier: "MyCell")

@@ -75,6 +75,42 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                     </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="MyCell2" rowHeight="279" id="acb-wO-dox" customClass="MyCell2" customModule="SampleApp4" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="68.333333969116211" width="375" height="279"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="acb-wO-dox" id="l1b-SU-E8c">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="279"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="aPn-Ce-10s">
+                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="279"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yjk-nQ-uOM">
+                                                    <rect key="frame" x="0.0" y="239" width="375" height="40"/>
+                                                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.75" colorSpace="custom" customColorSpace="displayP3"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="40" id="5S7-20-jir"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="aPn-Ce-10s" secondAttribute="bottom" id="7Ml-jM-0TJ"/>
+                                                <constraint firstAttribute="bottom" secondItem="yjk-nQ-uOM" secondAttribute="bottom" id="Iw4-mX-IM0"/>
+                                                <constraint firstItem="aPn-Ce-10s" firstAttribute="leading" secondItem="l1b-SU-E8c" secondAttribute="leading" id="T2a-Lc-6zE"/>
+                                                <constraint firstItem="aPn-Ce-10s" firstAttribute="top" secondItem="l1b-SU-E8c" secondAttribute="top" id="VIf-ar-Piw"/>
+                                                <constraint firstAttribute="trailing" secondItem="yjk-nQ-uOM" secondAttribute="trailing" id="dPi-lL-gwx"/>
+                                                <constraint firstAttribute="trailing" secondItem="aPn-Ce-10s" secondAttribute="trailing" id="kHp-lM-URi"/>
+                                                <constraint firstItem="yjk-nQ-uOM" firstAttribute="leading" secondItem="l1b-SU-E8c" secondAttribute="leading" id="xfL-cJ-17V"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="coverImageView" destination="aPn-Ce-10s" id="zee-XE-gyT"/>
+                                            <outlet property="nameLabel" destination="yjk-nQ-uOM" id="kwo-EC-QyN"/>
+                                        </connections>
+                                    </tableViewCell>
                                 </prototypes>
                             </tableView>
                         </subviews>
@@ -94,7 +130,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="38d-gv-qQN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1930" y="-394"/>
+            <point key="canvasLocation" x="-1930.4000000000001" y="-394.58128078817737"/>
         </scene>
         <!--Forth-->
         <scene sceneID="9Pf-y3-qS4">
